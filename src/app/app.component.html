@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Data Science Quiz</title>
+  
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+  <br/>
+  <div class="container">
+    <h2>Statistics Quiz</h2><br/>
+  </div>
+
+	<div [style.display]="formVisible ? 'none': 'inherit'" class ="container">
+		<form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+			<div  class="form-group">
+				<label for="emailId">Email Id: </label><br/><br/>
+				<input ngModel name="emailId" type="text" class="form-control" id="emailId"> 
+			</div>
+			<button type="submit" class="btn btn-primary">START QUIZ</button>
+		</form><br/>
+		
+	</div>
+  
+	<div [style.display]="formVisible && submit ? 'inherit': 'none'" class="container">
+  <form #quizForm="ngForm" (ngSubmit)="onSubmit(quizForm.value)" class="form-inline"> 
+  		<div class="form-group">
+	        <label>Q1. Find the range from mean for one standard deviation in the following data set:
+101, 106, 125, 142, 78, and 109</label><br>
+	        <input  type="radio" name="q1" value="90.29 to 130.05" id="mc" ngModel> 90.29 to 130.05<br>
+	        <input  type="radio" name="q1" value="101 to 142" id="mc" ngModel> 101 to 142<br>
+	        <input  type="radio" name="q1" value="19.88 to 25.62" id="mc" ngModel> 19.88 to 25.62<br>
+	        <input  type="radio" name="q1" value="110.17 to 395.14" id="mc" ngModel> 110.17 to 395.14<br>
+			</div><br><br/>
+      <div class="form-group">
+	        <label>Q2. The sum of the percent frequencies for all classes will always equal </label><br>
+	        <input  type="radio" name="q2" value="one" id="mc" ngModel> one<br>
+	        <input  type="radio" name="q2" value="the number of classes" id="mc" ngModel> the number of classes<br>
+	        <input  type="radio" name="q2" value="the number of items in the study" id="mc" ngModel> the number of items in the study<br>
+	        <input  type="radio" name="q2" value="100" id="mc" ngModel> 100<br>
+					<input  type="radio" name="q2" value="None of the above answers is correct" id="mc" ngModel> None of the above answers is correct<br>
+    	</div><br/><br/>
+      <div class="form-group">
+	        <label>Q3. The descriptive measure of dispersion that is based on the concept of a distancefrom the mean is</label><br>
+	        <input  type="radio" name="q3" value="range" id="mc" ngModel> range<br>
+	        <input  type="radio" name="q3" value="interquartile range" id="mc" ngModel> interquartile range<br>
+	        <input  type="radio" name="q3" value="both a and b" id="mc" ngModel>both a and b<br>
+	        <input  type="radio" name="q3" value="standard deviation" id="mc" ngModel> standard deviation<br>
+					<input  type="radio" name="q3" value="None of the above answers is correct" id="mc" ngModel> None of the above answers is correct<br>
+			</div><br/><br/>
+      <div class="form-group">
+	        <label>Q4. A survey was conducted at More Megastore about the satisfaction of the service. Below were the ratings (from 0-10) from 10 customers:[4,7,6,8,4,6,5,7,9,5 ]
+However, it was found that the customer who gave the rating 9 had made a mistake and actually wanted to rate 10. Assuming he/she rectifies the mistake, what is the difference between the new and the old mean?
+</label><br/><br/>
+	        <input  type="radio" name="q4" value="0.2" id="mc" ngModel> 0.2<br>
+	        <input  type="radio" name="q4" value="0.3" id="mc" ngModel> 0.3<br>
+	        <input  type="radio" name="q4" value="0.1" id="mc" ngModel>0.1<br>
+	        <input  type="radio" name="q4" value="0.05" id="mc" ngModel> 0.05<br>
+					<input  type="radio" name="q4" value="None of the Above" id="mc" ngModel> None of the Above<br>
+    	</div>
+			<div class="form-group">
+	        <label>Q5. Median is a measure of:
+</label><br/><br/>
+	        <input  type="radio" name="q5" value="Relative Dispersion" id="mc" ngModel> Relative Dispersion<br>
+	        <input  type="radio" name="q5" value="Absolute Dispersion" id="mc" ngModel> Absolute Dispersion<br>
+	        <input  type="radio" name="q5" value="Central Location" id="mc" ngModel>Central Location<br>
+	        <input  type="radio" name="q5" value="Relative Location" id="mc" ngModel> Relative Location<br>
+					<input  type="radio" name="q5" value="None of the Above" id="mc" ngModel> None of the Above<br>
+			</div><br/><br/>
+			<div class="form-group">
+	        <label>Q6. Let us define a new statistic as the distance between 70th sample
+        percentile and 30th sample percentile.  This new statistic would give
+        us information concerning:
+</label><br/>
+	        <input  type="radio" name="q6" value="central tendency" id="mc" ngModel> central tendency<br>
+	        <input  type="radio" name="q6" value="variability" id="mc" ngModel> variability<br>
+	        <input  type="radio" name="q6" value="relative position" id="mc" ngModel>relative position<br>
+	        <input  type="radio" name="q6" value="skewness" id="mc" ngModel> skewness<br>
+					<input  type="radio" name="q6" value="symmetry" id="mc" ngModel> symmetry<br>
+			</div><br/><br/>
+<div class="form-group">
+	        <label>Q7. Ms. Sweetwater's biology class had a standard deviation of 2.4 on astandardized test, while Ms. Quincy's biology had a standard deviation of 1.2 on the same test. 
+						 What can be said about these two classes?
+</label><br/>
+	        <input  type="radio" name="q7" value="Ms. Sweetwater's class is more homogeneous than Ms. Quincy's." id="mc" ngModel> Ms. Sweetwater's class is more homogeneous than Ms. Quincy's.<br>
+	        <input  type="radio" name="q7" value="Ms. Quincy's class is less heterogeneous than Ms. Sweetwater's." id="mc" ngModel> Ms. Quincy's class is less heterogeneous than Ms. Sweetwater's.<br>
+	        <input  type="radio" name="q7" value="Ms. Quincy's class did less well on the test than Ms. Sweet-water's." id="mc" ngModel> Ms. Quincy's class did less well on the test than Ms. Sweet-water's.<br>
+	        <input  type="radio" name="q7" value="Ms. Sweetwater's class performed twice as well on the test asMs. Quincy's." id="mc" ngModel> Ms. Sweetwater's class performed twice as well on the test asMs. Quincy's.<br>
+					
+    	</div><br/><br/>
+			<div class="form-group">
+	        <label>Q8. If you are told a population has a mean of 25 and a variance of 0,
+        what must you conclude?
+</label><br/>
+	        <input  type="radio" name="q8" value="Someone has made a mistake." id="mc" ngModel> Someone has made a mistake.<br>
+	        <input  type="radio" name="q8" value="There is only one element in the population." id="mc" ngModel> There is only one element in the population.<br>
+	        <input  type="radio" name="q8" value="There are no elements in the population." id="mc" ngModel>There are no elements in the population.<br>
+	        <input  type="radio" name="q8" value="All the elements in the population are 25" id="mc" ngModel> All the elements in the population are 25<br>
+					<input  type="radio" name="q8" value="None of the above." id="mc" ngModel> None of the above.<br>
+    	</div><br/><br/>
+			<div class="form-group">
+	        <label>Q9.Edith G. obtained a score of 65 in a statistics test, placing her atthe 78th percentile. If five points were added to each score in the distribution, her new score would be at the:
+</label><br/>
+	        <input  type="radio" name="q9" value="83rd percentile" id="mc" ngModel> 83rd percentile<br>
+	        <input  type="radio" name="q9" value="78th percentile" id="mc" ngModel> 78th percentile<br>
+	        <input  type="radio" name="q9" value="70th percentile" id="mc" ngModel> 70th percentile<br>
+	        <input  type="radio" name="q9" value="none of the above" id="mc" ngModel> none of the above<br>
+					<input  type="radio" name="q9" value="impossible to answer without additional information" id="mc" ngModel> impossible to answer without additional information<br>
+    	</div><br/><br/>
+			<div class="form-group">
+	        <label>Q10. If P(x) = x/11 - 0.25 , then what can be  the possible values of x to make it a probability distribution?
+</label><br/>
+	        <input  type="radio" name="q10" value="3, 4, 5, 6" id="mc" ngModel> 3, 4, 5, 6<br>
+	        <input  type="radio" name="q10" value="4, 5, 6, 7" id="mc" ngModel> 4, 5, 6, 7<br>
+	        <input  type="radio" name="q10" value="1, 5, 6, 9" id="mc" ngModel> 1, 5, 6, 9<br>
+	        <input  type="radio" name="q10" value="2, 5, 6, 8" id="mc" ngModel> 2, 5, 6, 8<br>
+			</div><br/><br/>
+			<div class="form-group">
+	        <label>Q11.Suppose that 80 percent of trees in a forest of 300 trees are infected with a virus, and we take random sample of 5 trees to test for the virus. Then, what is the probability that exactly 2 of the 5 trees have the virus? 
+</label><br/>
+	        <input  type="radio" name="q11" value="0.0672" id="mc" ngModel> 0.0672<br>
+	        <input  type="radio" name="q11" value="0.0451" id="mc" ngModel> 0.0451<br>
+	        <input  type="radio" name="q11" value="0.0521" id="mc" ngModel> 0.0521<br>
+	        <input  type="radio" name="q11" value="0.0813" id="mc" ngModel> 0.0813<br>
+			</div><br/><br/>
+			<div class="form-group">
+	        <label>Q12.In a large restaurant, an average of 3 out of every 5 customers ask for water with their meal. A random sample of 10 customers is selected; what is the probability that exactly 6 ask for water with their meal?
+</label><br/>
+	        <input  type="radio" name="q12" value="0.25" id="mc" ngModel> 0.25<br>
+	        <input  type="radio" name="q12" value="0.31" id="mc" ngModel> 0.31<br>
+	        <input  type="radio" name="q12" value="0.20" id="mc" ngModel> 0.20<br>
+	        <input  type="radio" name="q12" value="0.28" id="mc" ngModel> 0.28<br>
+			</div><br/><br/>
+			<div class="form-group">
+	        <label>Q13.A company department takes on average 2 new employees per year. New employees are taken independently at any time of the year. In a given year, what is the probability that the department employs at least one new employee? P(X > =1).
+							Pr(X=k)= e^()
+							Poisson Distribution is described as: 
+</label><br/>
+	<!--<img style="padding-left: 40%" src="C:\Users\Prashant\DataScienceQuiz\src\app\images\Capture.jpg"/><br/>-->
+	        <input  type="radio" name="q13" value="e^-2" id="mc" ngModel> e^-2<br>
+					<input  type="radio" name="q13" value="1-2(e^-2)" id="mc" ngModel> 1-2(e^-2)<br>
+					<input  type="radio" name="q13" value="2(e^-2)" id="mc" ngModel> 2(e^-2)<br>
+					<input  type="radio" name="q13" value="1-(e^-2)" id="mc" ngModel> 1-(e^-2)<br>
+			</div><br/><br/>
+			<div class="form-group">
+	        <label>Q14.The following data shows the number of hours worked by 200 statistics students
+						<br/><br/><table class="table table-bordered">
+		<thead>
+      <tr>
+        <th>Number Of Hours</th>
+        <th>Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0-9</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>10-19</td>
+        <td>50</td></tr>
+      <tr>
+        <td>20-29</td>
+        <td>70</td>
+      </tr>
+			<tr>
+        <td>30-39</td>
+        <td>40</td>
+      </tr>
+    </tbody>
+  </table>
+</label><br/>
+<label>
+The class width of the distribution is:
+	</label><br/>
+	        <input  type="radio" name="q14" value="9" id="mc" ngModel> 9<br>
+					<input  type="radio" name="q14" value="10" id="mc" ngModel> 10<br>
+					<input  type="radio" name="q14" value="11" id="mc" ngModel> 11<br>
+					<input  type="radio" name="q14" value="varies from class to class" id="mc" ngModel> varies from class to class<br>
+					<input  type="radio" name="q14" value="none of the above" id="mc" ngModel> none of the above<br>
+			</div><br/><br/>
+			<div class="form-group">
+	        <label>Q15.The following data shows the number of hours worked by 200 statistics students.
+						<br/><br/><table class="table table-bordered">
+		<thead>
+      <tr>
+        <th>Number Of Hours</th>
+        <th>Frequency</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0-9</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>10-19</td>
+        <td>50</td></tr>
+      <tr>
+        <td>20-29</td>
+        <td>70</td>
+      </tr>
+			<tr>
+        <td>30-39</td>
+        <td>40</td>
+      </tr>
+    </tbody>
+  </table>
+</label><br/>
+<label>The cumulative frequency for the class 10-19 is:</label>
+<br/>
+	        <input  type="radio" name="q15" value="90" id="mc" ngModel> 90<br>
+					<input  type="radio" name="q15" value="0.25" id="mc" ngModel> 0.25<br>
+					<input  type="radio" name="q15" value="0.45" id="mc" ngModel> 0.45<br>
+					<input  type="radio" name="q15" value="cannot be determined from the information given" id="mc" ngModel> cannot be determined from the information given<br>
+					<input  type="radio" name="q15" value="none of the above" id="mc" ngModel> none of the above<br>
+			</div><br/><br/>
+        <br><br><button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+<div [style.display]="submit ? 'none': 'inherit'" class="container">
+	<h2>Congratulations. You got {{correct}} correct answers!</h2>
+</div>
+</body>
+</html>
